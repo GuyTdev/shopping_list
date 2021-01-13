@@ -28,7 +28,7 @@ Array.from(ul.children).forEach(function(item) {
 // appending a delete button to an element. every li get a button element as a child.
 function appendDeleteBtnTo(element) {
   var deleteButton = document.createElement("button");
-  deleteButton.innerHTML = "Del";
+  deleteButton.innerHTML = "Delete";
   deleteButton.classList.add("delete");
   element.appendChild(deleteButton);
 }
