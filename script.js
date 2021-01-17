@@ -66,8 +66,9 @@ function addListAfterKeypress(event) {
 //   - If a list item is found (target), we check if the actual click target was the delete button. 
 //   - If it's the delete button the target is removed. If not, the done class is added.
 function listItemClickHandler(e) {
-  const closetLi = e.target.closest('li'); //checks if the user clickes on li element or not and store the answer into isLi variable.
-  
+  const closestLi = e.target.closest('li'); //checks if the user clicks on li element or not and store the answer into isLi variable. if not found the value is null. 
+ 
+  //note: (!null)===true  
   if(!closestLi) return; //If no list item is found in the chain, the function terminates (return). 
   
   if (e.target.matches('.delete')) {//If it's the delete button the li(target) is removed. If not, the the done class is added.
